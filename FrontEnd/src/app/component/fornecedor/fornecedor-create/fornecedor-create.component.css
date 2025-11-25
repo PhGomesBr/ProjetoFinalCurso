@@ -111,6 +111,11 @@ mat-form-field.full-width {
     transition: all 0.3s ease;
 }
 
+.card-scrollable-content {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
 
 /* Responsividade opcional */
 @media (max-width: 768px) {

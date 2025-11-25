@@ -96,7 +96,11 @@ mat-form-field.full-width {
 }
 
 
-
+.card-scrollable-content {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
 
 
 /* Responsividade opcional */

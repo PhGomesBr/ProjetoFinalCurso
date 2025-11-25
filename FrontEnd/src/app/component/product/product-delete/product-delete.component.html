@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title class="titulo">Excluir Produto</mat-card-title>
-  <div class="scrollable-form">
+  <div class="card-scrollable-content">
     <form>
       <!-- Nome do Produto -->
       <mat-form-field appearance="outline">
@@ -92,16 +92,16 @@
         <mat-icon matPrefix>update</mat-icon>
         <input matInput [value]="(product.proDataAtualizacao | date:'dd/MM/yyyy')" disabled>
       </mat-form-field>
-      <div class="botoes">
-      <!-- Botões -->
-      <button class="btnExcl" (click)="deleteProduct()" color="primary">
-        Excluir
-      </button>
-
-      <button class="btnCancel" (click)="cancel()">
-        Cancelar
-      </button>
-      </div>
     </form>
+  </div>
+  <div class="botoes">
+  <!-- Botões -->
+  <button class="btnExcl" (click)="deleteProduct()" color="primary">
+    Excluir
+  </button>
+
+  <button class="btnCancel" (click)="cancel()">
+    Cancelar
+  </button>
   </div>
 </mat-card>

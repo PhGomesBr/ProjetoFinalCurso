@@ -1,6 +1,7 @@
 <mat-card>
   <mat-card-title class="titulo">Excluir cliente</mat-card-title>
 
+  <div class="card-scrollable-content">
   <form *ngIf="cliente">
     <!-- Seção: Dados Pessoais -->
     <h3 class="subtitulo">Dados Pessoais</h3>
@@ -72,16 +73,15 @@
     </mat-form-field>
 
     <!-- Botões -->
-    <div class="botoes">
-      <button mat-raised-button color="warn" class="btnExcl" (click)="deleteCliente()">
-        <mat-icon>delete</mat-icon>
-        Excluir
-      </button>
-
-      <button mat-raised-button class="btnCancel" (click)="cancel()">
-        <mat-icon>cancel</mat-icon>
-        Cancelar
-      </button>
-    </div>
   </form>
+</div>
+<div class="botoes">
+  <button class="btnExcl" (click)="deleteCliente()" color="primary">
+    Excluir
+  </button>
+
+  <button class="btnCancel" (click)="cancel()">
+    Cancelar
+  </button>
+</div>
 </mat-card>

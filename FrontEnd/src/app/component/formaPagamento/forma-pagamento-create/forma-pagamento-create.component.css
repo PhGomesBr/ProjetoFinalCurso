@@ -4,30 +4,51 @@ form {
     flex-direction: column; 
 }
 
-/* Estiliza o botão com margens específicas */
-button {
-    margin: 20px 15px 0px 0px; /* Define as margens: superior, direita, inferior e esquerda */
-    height: 40px; /* Define a altura do botão */
-    background-color: #13286e; /* Define a cor de fundo do botão */
-    color: white; /* Define a cor do texto do botão */
-    border-radius: 5px; /* Define bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
-    font-size: 16px; /* Define o tamanho da fonte do texto do botão */
-    font-weight: bold; /* Define o peso da fonte como negrito */
-    transition: all 0.3s ease; /* Suaviza as mudanças de estilo */
-}
-
-/* Efeito neon ao passar o mouse */
-button:hover {
-    background-color: #3b5998; /* Leve alteração na cor de fundo */
-}
-
-/* Animação ao clicar */
-button:active {
-    transform: scale(0.95); /* Reduz ligeiramente o tamanho do botão */
-}
-
-
+/* Botões */
+.botoes {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  button {
+    height: 45px;
+    min-width: 120px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .btnSave{
+    background-color: #2e7d32;
+  }
+  .btnCancel{
+    background-color: #d32f2f;
+  }/* Estilo botão salvar */
+button.mat-raised-button {
+    background-color: #388e3c;
+    color: white;
+  }
+  
+  button.btnSave:hover {
+    background-color: #145719;
+  }
+  
+  /* Estilo botão cancelar */
+  button.mat-stroked-button {
+    border: 1px solid #d32f2f;
+    color: #d32f2f;
+    background-color: white;
+  }
+  
+  button.btnCancel:hover {
+    background-color: #6b0f0f;
+  }
+  
 mat-card {
     max-width: 600px; /* Limita a largura do cartão */
     margin: 20px auto; /* Centraliza o cartão na página */
@@ -49,18 +70,5 @@ mat-form-field {
     margin-bottom: 20px; /* Espaço abaixo de cada campo */
 }
 
-button {
-    width: 100%; /* Faz os botões ocuparem toda a largura */
-    margin-top: 10px; /* Espaço acima de cada botão */
-}
 
-button.mat-raised-button {
-    background-color: #3f51b5; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
-}
-
-button.mat-raised-button:hover {
-    background-color: #303f9f; /* Cor de fundo do botão ao passar o mouse */
-}
 

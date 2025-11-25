@@ -96,11 +96,11 @@ button {
 }
 
 /* Botões específicos */
-button.btnSave {
-  background-color: #388e3c;
+.btnSave{
+  background-color: #2e7d32;
 }
 button.btnSave:hover {
-  background-color: #2e7d32;
+  background-color: #145719;
 }
 
 button.btnCancel {

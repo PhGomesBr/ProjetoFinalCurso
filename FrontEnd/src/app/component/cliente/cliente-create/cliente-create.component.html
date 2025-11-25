@@ -3,6 +3,7 @@
   <!-- Título do card -->
   <mat-card-title class="titulo">Novo Cliente</mat-card-title>
 
+  <div class="card-scrollable-content">
   <!-- Formulário para entrada de dados do cliente -->
   <form class="formulario">
 
@@ -79,11 +80,12 @@
       <input matInput [(ngModel)]="cliente.conEmail" name="conEmail">
     </mat-form-field>
 
-    <!-- Botões -->
-    <div class="botoes">
+  </form>
+ </div>
+     <!-- Botões -->
+     <div class="botoes">
       <button class="btnSave" color="primary" (click)="createCliente()">Salvar</button>
       <button class="btnCancel" color="warn" (click)="cancel()">Cancelar</button>
     </div>
-
-  </form>
+    
 </mat-card>

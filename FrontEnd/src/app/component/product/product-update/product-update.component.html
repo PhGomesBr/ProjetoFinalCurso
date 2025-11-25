@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-title class="titulo">Atualizar Produto</mat-card-title>
-    <div class="scrollable-form">
-        <form>
+    <div class="card-scrollable-content">
+      <form>
    <!-- Nome do Produto -->
       <mat-form-field appearance="outline">
         <mat-label>Nome do Produto</mat-label>
@@ -198,15 +198,17 @@
         <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
 
-      <div class="botoes">
-            <button class="btnSave" (click)="updateProduct()" color="primary">
-                Atualizar
-            </button>
+    </form>
+  </div>
+  <div class="botoes">
+    <button class="btnSave" (click)="updateProduct()" color="primary">
+      <mat-icon style="vertical-align: middle; margin-right: 4px;">save</mat-icon>
+      Salvar
+    </button>
 
-            <button class="btnCancel" mat-raised-button (click)="cancel()">
-                Cancelar
-            </button>
-        </div>
-        </form>
-    </div>
+    <button class="btnCancel" (click)="cancel()">
+      <mat-icon style="vertical-align: middle; margin-right: 4px;">cancel</mat-icon>
+      Cancelar
+    </button>
+  </div>
 </mat-card>

@@ -1,5 +1,6 @@
 <mat-card>
   <mat-card-title class="titulo">Novo Fornecedor</mat-card-title>
+  <div class="card-scrollable-content">
 
   <form class="formulario" autocomplete="off">
     <!-- Seção: Dados Pessoais -->
@@ -81,10 +82,12 @@
       <input matInput [(ngModel)]="fornecedor.conEmail" name="conEmail" required type="email">
     </mat-form-field>
 
+  </form>
+</div>
+
     <!-- Botões -->
     <div class="botoes">
       <button class="btnSave" color="primary" type="button" (click)="createFornecedor()">Salvar</button>
       <button mat-stroked-button class="btnCancel" color="warn" type="button" (click)="cancel()">Cancelar</button>
     </div>
-  </form>
 </mat-card>

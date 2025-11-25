@@ -1,7 +1,8 @@
 <mat-card>
     <mat-card-title class="titulo">Nova Forma de Pagamento</mat-card-title>
+    <div>
     <form>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Forma de pagamento?</mat-label>
             <mat-select name="fpgTipo" required [(ngModel)]="formaPagamento.fpgTipo" >
                 <mat-option value="Credito">Crédito</mat-option>
@@ -12,13 +13,13 @@
         </mat-form-field>
 
             <!--Descrição-->
-            <mat-form-field>
+            <mat-form-field appearance="outline">
                 <mat-label>Descrição</mat-label>
                 <textarea matInput placeholder="Descrição" name="fpgDescricao" required [(ngModel)]="formaPagamento.fpgDescricao"></textarea>
             </mat-form-field>
 
             <!--Permite parcelamento-->
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Parcelamento ativo?</mat-label>
             <mat-select name="fpgPermiteParcelamento" required [(ngModel)]="formaPagamento.fpgPermiteParcelamento" [disabled]="formaPagamento.fpgTipo != 'Credito'">
                 <mat-option [value]="true">Sim</mat-option>
@@ -27,7 +28,7 @@
         </mat-form-field>
         
     <!--Numero de Parcelas-->
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Número de parcelas</mat-label>
             <mat-select name="fpgNumMaxParcelas" required [(ngModel)]="formaPagamento.fpgNumMaxParcelas" [disabled]="formaPagamento.fpgPermiteParcelamento === false || formaPagamento.fpgTipo != 'Credito'">
                 <mat-option value="1">1 Parcelas</mat-option>
@@ -45,7 +46,7 @@
             </mat-select>
         </mat-form-field>
         <!--Taxa adicional-->
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Taxa adicional</mat-label>
             <mat-select name="fpgTaxaAdicional" required [(ngModel)]="formaPagamento.fpgTaxaAdicional">
                 <mat-option value="0">Sem Taxa</mat-option>
@@ -62,19 +63,10 @@
             </mat-select>
         </mat-form-field>
     </form>
-
+</div>
     <!-- Botão para salvar a nova forma de pagamento -->
-    <button 
-        mat-raised-button 
-        (click)="createFormaPagamento()" 
-        color="primary">
-        Salvar
-    </button>
-   
-    <!-- Botão para cancelar a operação -->
-    <button 
-        mat-raised-button 
-        (click)="cancel()">
-        Cancelar
-    </button>
+    <div class="botoes">
+      <button class="btnSave" color="primary" (click)="createFormaPagamento()">Salvar</button>
+      <button class="btnCancel" color="warn" (click)="cancel()">Cancelar</button>
+</div>
 </mat-card>

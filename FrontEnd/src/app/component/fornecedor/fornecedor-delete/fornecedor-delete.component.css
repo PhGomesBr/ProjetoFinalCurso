@@ -95,6 +95,11 @@ mat-form-field.full-width {
   grid-column: span 2;
 }
 
+.card-scrollable-content {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
 
 
 

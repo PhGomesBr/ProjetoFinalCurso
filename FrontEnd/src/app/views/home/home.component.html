@@ -3,7 +3,7 @@
     <section class="cards">
       <div class="card">
         <h3><span>💰</span> Total de Lucro</h3>
-        <p class="valor">R$ {{ totalLucro | number:'1.2-2' }}</p>
+        <p class="valor">{{ totalLucro | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</p>
       </div>
       <a class="card" mat-list-item routerLink="/products">
         <div>

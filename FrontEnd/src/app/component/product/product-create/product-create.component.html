@@ -4,7 +4,7 @@
     Novo Produto
   </mat-card-title>
 
-  <div class="scrollable-form">
+  <div class="card-scrollable-content">
     <form>
 
       <!-- Nome do Produto -->
@@ -211,17 +211,17 @@
       </div>
 
       <!-- Botões -->
-      <div class="botoes">
-        <button class="btnSave" (click)="createProduct()" color="primary">
-          <mat-icon style="vertical-align: middle; margin-right: 4px;">save</mat-icon>
-          Salvar
-        </button>
-
-        <button class="btnCancel" (click)="cancel()">
-          <mat-icon style="vertical-align: middle; margin-right: 4px;">cancel</mat-icon>
-          Cancelar
-        </button>
-      </div>
     </form>
+  </div>
+  <div class="botoes">
+    <button class="btnSave" (click)="createProduct()" color="primary">
+      <mat-icon style="vertical-align: middle; margin-right: 4px;">save</mat-icon>
+      Salvar
+    </button>
+
+    <button class="btnCancel" (click)="cancel()">
+      <mat-icon style="vertical-align: middle; margin-right: 4px;">cancel</mat-icon>
+      Cancelar
+    </button>
   </div>
 </mat-card>

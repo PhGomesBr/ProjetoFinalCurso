@@ -56,6 +56,12 @@ import { EstoqueBaixoComponent } from './component/estoque-baixo/estoque-baixo.c
 import{ MatAutocompleteModule } from '@angular/material/autocomplete'; // Adicionado para autocompletar
 import { MatButtonModule } from '@angular/material/button';
 import { GraficoProdutosVendidosComponent } from './component/grafico-produtos-vendidos/grafico-produtos-vendidos.component';
+import { LOCALE_ID } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
+
 
 
 import { MatSortModule } from '@angular/material/sort'; // Adicionado
@@ -124,7 +130,7 @@ import { MatSortModule } from '@angular/material/sort'; // Adicionado
     MatSortModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

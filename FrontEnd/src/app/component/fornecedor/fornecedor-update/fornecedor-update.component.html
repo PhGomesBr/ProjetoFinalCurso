@@ -1,6 +1,8 @@
 <mat-card>
     <mat-card-title class="titulo">Alterar Fornecedor</mat-card-title>
     <!-- Formulário para entrada de dados do fornecedor -->
+    <div class="card-scrollable-content">
+
     <form *ngIf="fornecedor" class="formulario">
         <h3 class="subtitulo">Dados Pessoais</h3>
 
@@ -76,7 +78,7 @@
             <input matInput [(ngModel)]="fornecedor.conEmail" name="conEmail">
         </mat-form-field>
     </form>
-
+</div>
     <div class="botoes">
     <button class="btnSave" (click)="updateFornecedor()" color="primary">
         Atualizar

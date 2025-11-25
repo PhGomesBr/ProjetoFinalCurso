@@ -63,12 +63,9 @@
         </mat-form-field>
     </form>
 
-    <button mat-raised-button (click)="updateFormaPagamento()" color="primary">
-        Atualizar
-    </button>
-   
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
+    <div class="botoes">
+      <button class="btnSave" color="primary" (click)="updateFormaPagamento()">Atualizar</button>
+      <button class="btnCancel" color="warn" (click)="cancel()">Cancelar</button>
+</div>
 
 </mat-card>

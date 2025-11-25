@@ -1,6 +1,8 @@
 <mat-card>
     <mat-card-title class="titulo">Alterar Cliente</mat-card-title>
     <!-- Formulário para entrada de dados do cliente -->
+    <div class="card-scrollable-content">
+
     <form *ngIf="cliente" class="formulario">
         <h3 class="subtitulo">Dados Pessoais</h3>
 
@@ -70,6 +72,7 @@
             <input matInput [(ngModel)]="cliente.conEmail" name="conEmail">
         </mat-form-field>
     </form>
+</div>
     <div class="botoes">
         <button class="btnSave" (click)="updateCliente()" color="primary">
             Atualizar
