@@ -98,6 +98,11 @@ main {
     box-shadow: 0 8px 25px rgba(51, 212, 214, 0.3);
 }
 
+.card.warning:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.479);
+        }
+
 /* Gráficos: Configuração de layout flexível para os gráficos */
 .charts {
     display: flex;
@@ -129,7 +134,7 @@ main {
 /* Efeito de hover nos gráficos */
 .chart:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(51, 212, 214, 0.3);
+    box-shadow: 0 8px 25px rgba(34, 108, 109, 0.3);
 }
 
 /* Responsividade: Ajustes para telas menores */

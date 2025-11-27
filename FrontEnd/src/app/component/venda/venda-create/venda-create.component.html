@@ -38,7 +38,7 @@
                   <mat-autocomplete #autoFpg="matAutocomplete" [displayWith]="displayFormaPagamento"
                       (optionSelected)="onFormaPagamentoSelecionada($event.option.value)">
                       <mat-option *ngFor="let formaPagamento of formaPagamentosFiltrados" [value]="formaPagamento">
-                          {{ formaPagamento.fpgDescricao }}
+                          {{ formaPagamento.fpgTipo}}
                       </mat-option>
                   </mat-autocomplete>
               </mat-form-field>
@@ -47,14 +47,25 @@
           <h3 class="subtitulo">Dados Dos Produtos Vendidos</h3>
           <div formArrayName="compras">
               <div *ngFor="let compra of vendaItem.controls; let i = index" [formGroupName]="i" class="produto-bloco form-columns">
-                  <mat-form-field appearance="outline">
-                      <mat-label>Produto</mat-label>
-                      <mat-icon matPrefix>storefront</mat-icon>
-                      <mat-select placeholder="Produto" formControlName="proId" (selectionChange)="onProdutoChange(i)" required>
-                          <mat-option value="" disabled>Selecione um produto</mat-option>
-                          <mat-option *ngFor="let p of products" [value]="p.proId">{{ p.proNome }}</mat-option>
-                      </mat-select>
+                <mat-form-field appearance="outline">
+                    <mat-label>Produto</mat-label>
+                    <mat-icon matPrefix>storefront</mat-icon>
+                  
+                    <input type="text" 
+                           matInput 
+                           [formControl]="produtoControl" 
+                           [matAutocomplete]="autoProd"
+                           placeholder="Buscar produto...">
+                  
+                    <mat-autocomplete #autoProd="matAutocomplete" 
+                                      [displayWith]="displayProduto"
+                                      (optionSelected)="onProdutoSelecionado($event.option.value, i)">
+                        <mat-option *ngFor="let p of produtoFiltrados" [value]="p">
+                            {{ p.proNome }}
+                        </mat-option>
+                    </mat-autocomplete>
                   </mat-form-field>
+                  
 
                   <mat-form-field appearance="outline">
                       <mat-label>Quantidade</mat-label>

@@ -5,17 +5,19 @@
   </mat-card-title>
 
   <!-- Filtro para selecionar o limite de estoque -->
-  <mat-form-field appearance="fill" class="custom-select">
-    <mat-label>Limite de Estoque</mat-label>
-    <mat-select [(ngModel)]="limite" (selectionChange)="carregarProdutosEstoqueBaixo()">
-      <mat-option value="5">5</mat-option>
-      <mat-option value="10">10</mat-option>
-      <mat-option value="25">25</mat-option>
-      <mat-option value="50">50</mat-option>
-      <mat-option value="100">100</mat-option>
-    </mat-select>
-  </mat-form-field>
-
+  <div class="escolha">
+    <mat-form-field appearance="outline" a:active:outline:blue class="custom-select">
+      <mat-label>Limite de Estoque</mat-label>
+      <mat-select [(ngModel)]="limite" (selectionChange)="carregarProdutosEstoqueBaixo()">
+        <mat-option value="5">5</mat-option>
+        <mat-option value="10">10</mat-option>
+        <mat-option value="25">25</mat-option>
+        <mat-option value="50">50</mat-option>
+        <mat-option value="100">100</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+    
   <div class="scrollable-form">
     <!-- Tabela com suporte à ordenação via matSort -->
     <table mat-table [dataSource]="produtos" class="mat-table" matSort>

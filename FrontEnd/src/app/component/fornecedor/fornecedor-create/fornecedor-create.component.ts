@@ -22,7 +22,8 @@ export class FornecedorCreateComponent implements OnInit {
     endEstado: '',
     conCelular: '',
     conTelefoneComercial: '',
-    conEmail: ''
+    conEmail: '',
+    forId: 0
   };
 
   constructor(

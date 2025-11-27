@@ -29,21 +29,20 @@ button.estoque{
 }
 
 /* Estilização padrão dos botões */
-button {
+mat-card .novo {
     margin-bottom: 30px; /* Espaço inferior do botão */
     width: 100%; /* Ocupa toda a largura do container */
     height: 45px; /* Altura padrão do botão */
-    background-color: #A020F0; /* Cor roxa como fundo do botão */
-    color: white; /* Texto em branco para contraste */
+    background-color: #9b2fff; /* Cor roxa como fundo do botão */
+    color: #ffffff; /* Texto em branco para contraste */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas levemente arredondadas */
     font-weight: 600; /* Deixa o texto um pouco mais marcante */
     letter-spacing: 0.5px; /* Espaçamento sutil entre letras */
-    align-items: center; /* Centraliza o conteúdo do botão */
-    font-size: 16px;
     transition: all 0.3s ease; /* Transições suaves para hover e active */
-}
+    font-size: 16px;
 
+}
 /* Efeito visual ao passar o mouse por cima do botão */
 button:hover {
     background: linear-gradient(135deg, #ff00cc, #3333ff); /* Gradiente neon roxo/azul no hover */

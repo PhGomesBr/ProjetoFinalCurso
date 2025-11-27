@@ -16,12 +16,12 @@ mat-card {
 }
 
 /* Estilização padrão dos botões */
-button {
+mat-card button {
     margin-bottom: 30px; /* Espaço inferior do botão */
     width: 100%; /* Ocupa toda a largura do container */
     height: 45px; /* Altura padrão do botão */
-    background-color: #A020F0; /* Cor roxa como fundo do botão */
-    color: white; /* Texto em branco para contraste */
+    background-color: #9b2fff; /* Cor roxa como fundo do botão */
+    color: #ffffff; /* Texto em branco para contraste */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas levemente arredondadas */
     font-weight: 600; /* Deixa o texto um pouco mais marcante */

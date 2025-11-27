@@ -20,12 +20,15 @@ import { VendaNotificacaoService } from '../vendaNotificacaoService.ts/VendaNoti
 export class VendaCreateComponent implements OnInit {
   vendaForm!: FormGroup;
   products: Product[] = [];
+  produtoControl = new FormControl('');
+  produtoFiltrados: Product[] = [];
   clienteControl = new FormControl('');
   clientes: Cliente[] = [];
   clientesFiltrados: Cliente[] = [];
   formaPagamentos: FormaPagamento[] = [];
   formaPagamentoControl = new FormControl('');
   formaPagamentosFiltrados: FormaPagamento[] = [];
+
 
   constructor(
     private fb: FormBuilder,
@@ -49,6 +52,7 @@ export class VendaCreateComponent implements OnInit {
       vendaData: [new Date(), Validators.required],
       cliId: [null, Validators.required],
       fpgId: [null, Validators.required],
+      proId: [null, Validators.required],
       compras: this.fb.array([], Validators.required)
     });
 
@@ -77,7 +81,20 @@ export class VendaCreateComponent implements OnInit {
       this.formaPagamentoControl.valueChanges.subscribe(value => {
         const filter = typeof value === 'string' ? value.toLowerCase() : '';
         this.formaPagamentosFiltrados = this.formaPagamentos.filter(fp =>
-          fp.fpgDescricao.toLowerCase().includes(filter)
+          fp.fpgTipo.toLowerCase().includes(filter)
+        );
+      });
+      
+    });
+
+    this.productService.read().subscribe(p => {
+      this.products = p;
+      this.produtoFiltrados = p;
+
+      this.produtoControl.valueChanges.subscribe(value => {
+        const filter = typeof value === 'string' ? value.toLowerCase() : '';
+        this.produtoFiltrados = this.products.filter(p =>
+          p.proNome.toLowerCase().includes(filter)
         );
       });
       
@@ -182,4 +199,20 @@ export class VendaCreateComponent implements OnInit {
   onFormaPagamentoSelecionada(fp: FormaPagamento): void {
     this.vendaForm.get('fpgId')?.setValue(fp.fpgId);
   }
+
+  displayProduto(produto: Product): string {
+    return produto?.proNome || '';
+  }
+  
+  onProdutoSelecionado(produto: Product, index: number): void {
+    const compraGroup = this.vendaItem.at(index);
+  
+    compraGroup.patchValue({
+      proId: produto.proId,
+      compraPrecoVenda: produto.proPrecoVenda
+    });
+  }
+  
+  
+  
 }

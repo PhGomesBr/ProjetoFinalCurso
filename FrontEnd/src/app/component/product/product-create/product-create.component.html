@@ -182,12 +182,26 @@
       <mat-form-field appearance="outline">
         <mat-label>Fornecedor</mat-label>
         <mat-icon matPrefix>store</mat-icon>
-        <mat-select [(ngModel)]="product.fornecedor" name="fornecedor" required>
-          <mat-option *ngFor="let fornecedor of fornecedores" [value]="{ forId: fornecedor.forId }">
-            {{ fornecedor.forNomeFantasia }}
-          </mat-option>
-        </mat-select>
+      
+        <input type="text"
+               matInput
+               [formControl]="fornecedorControl"
+               [matAutocomplete]="autoFornecedor">
+      
+        <!-- Autocomplete -->
+        <mat-autocomplete #autoFornecedor="matAutocomplete"
+                          [displayWith]="displayFornecedor"
+                          (optionSelected)="onFornecedorSelecionado($event.option.value)">
+      
+            <mat-option *ngFor="let f of fornecedoresFiltrados" [value]="f">
+              {{ f.forNomeFantasia }}
+            </mat-option>
+      
+        </mat-autocomplete>
       </mat-form-field>
+      
+      
+
 
       <!-- Data de Cadastro -->
       <mat-form-field appearance="outline">

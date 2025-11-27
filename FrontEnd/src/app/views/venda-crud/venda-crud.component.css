@@ -7,26 +7,22 @@ main {
 }
 
 /* Estilização dos cartões (mat-card do Angular Material) */
-mat-card {
-    background: linear-gradient(145deg, #1e1e2f, #2b2b3d); /* Cinzas azulados escuros */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(160, 32, 240, 0.2); /* Sombra combinando com o botão roxo */
-    padding: 20px;
-    margin-bottom: 20px;
-}
+
 
 /* Estilização padrão dos botões */
-button {
+ button {
     margin-bottom: 30px; /* Espaço inferior do botão */
     width: 100%; /* Ocupa toda a largura do container */
     height: 45px; /* Altura padrão do botão */
-    background-color: #A020F0; /* Cor roxa como fundo do botão */
-    color: white; /* Texto em branco para contraste */
+    background-color: #9b2fff; /* Cor roxa como fundo do botão */
+    color: #ffffff; /* Texto em branco para contraste */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas levemente arredondadas */
     font-weight: 600; /* Deixa o texto um pouco mais marcante */
     letter-spacing: 0.5px; /* Espaçamento sutil entre letras */
     transition: all 0.3s ease; /* Transições suaves para hover e active */
+    font-size: 16px;
+
 }
 
 /* Efeito visual ao passar o mouse por cima do botão */

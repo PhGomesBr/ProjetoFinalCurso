@@ -19,7 +19,7 @@ table {
 /* Cabeçalho da tabela */
 th {
     background-color: #2c2c2c; /* Fundo do cabeçalho */
-    color: #f1f1f1; /* Cor do texto */
+    color: #FFC745; /* Cor do texto */
     font-weight: bold; /* Texto em negrito */
     padding: 16px; /* Espaçamento interno */
     text-transform: uppercase; /* Texto em maiúsculas */
@@ -67,37 +67,41 @@ tr:hover {
     padding-right: 10px; /* Espaço para a barra de rolagem */
 }
 
-/* Barra de rolagem para navegadores WebKit (Chrome, Edge, Safari) */
+/* Scrollbar moderna estilo premium */
 .scrollable-form::-webkit-scrollbar {
-    width: 8px; /* Largura da barra de rolagem */
+    width: 12px; /* Largura mais moderna */
 }
 
 .scrollable-form::-webkit-scrollbar-track {
-    background: #2a003f; /* Fundo da trilha */
-    border-radius: 10px; /* Bordas arredondadas */
+    background: #111; /* Trilho fosco */
+    border-radius: 12px;
+    border: 1px solid #222; /* leve borda para dar profundidade */
 }
 
 .scrollable-form::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #00e676, #ff5252); /* Gradiente neon */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px #00e676, 0 0 20px #ff5252; /* Efeito de brilho neon */
+    background: rgba(180, 0, 255, 0.4); /* roxo translúcido (efeito vidro) */
+    border-radius: 12px;
+    backdrop-filter: blur(3px); /* efeito glass */
+    border: 2px solid #1a1a1a; /* cria recorte clean no thumb */
+    transition: all 0.25s ease;
 }
 
 .scrollable-form::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #00b358, #cc0000); /* Gradiente mais escuro ao passar o mouse */
-    box-shadow: 0 0 15px #00b358, 0 0 25px #cc0000; /* Aumenta o brilho */
+    background: rgba(220, 0, 255, 0.6); /* thumb destaca no hover */
+    border: 2px solid #292929;
 }
 
-/* Barra de rolagem para Firefox */
+/* Firefox */
 .scrollable-form {
-    scrollbar-width: thin; /* Barra de rolagem fina */
-    scrollbar-color: #a020f0 #2a003f; /* Cor da barra (thumb) e trilha (track) */
+    scrollbar-width: thin;
+    scrollbar-color: #b400ff80 #111;
 }
 
 /* Estilização do mat-select */
 .custom-select {
     width: 200px;
     margin-bottom: 20px;
+    
 }
 
 .custom-select .mat-form-field-flex {
@@ -114,13 +118,8 @@ tr:hover {
     color: #e0e0e0; /* Cor do valor selecionado */
 }
 
-.custom-select .mat-select-arrow {
-    color: #00e676; /* Cor da seta */
-}
 
-.custom-select .mat-form-field-underline {
-    display: none; /* Remove a linha padrão */
-}
+
 
 /* Opções do mat-select */
 .mat-option {
@@ -134,7 +133,7 @@ tr:hover {
 
 /* Título do cartão */
 mat-card-title {
-    color: #f1f1f1; /* Cor do texto */
+    color: #FFC745; /* Cor do texto */
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -143,4 +142,20 @@ mat-card-title {
 /* Ícone do título */
 mat-card-title mat-icon {
     color: #ff5252; /* Vermelho neon para o ícone de aviso */
+}
+
+.escolha {
+   max-height: 57px;
+   background: #FFC745;
+   padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    margin-block-end: 1%;
+}
+
+mat-label{
+    font-size: 1em;
+    font: normal;
+    font-weight: bold;
+    color: black;
 }
