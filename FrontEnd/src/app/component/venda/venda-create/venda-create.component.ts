@@ -192,7 +192,7 @@ export class VendaCreateComponent implements OnInit {
   }
 
   displayFormaPagamento(fp: FormaPagamento): string {
-    return fp?.fpgDescricao || '';
+    return fp?.fpgTipo || '';
   }
   
 
